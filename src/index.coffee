@@ -34,7 +34,7 @@ waitForRedis = (config) ->
       if watch.duration().millis() > totalTimeout
         console.log "Could not connect to Redis."
         wrapUp(1)
-      Math.min connectTimeout, Math.max(0, totalTeimout - watch.duration().millis())
+      Math.min connectTimeout, Math.max(0, totalTimeout - watch.duration().millis())
 
   redis = new Redis(options)
   connected = false
